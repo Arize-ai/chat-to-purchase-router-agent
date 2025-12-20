@@ -1,0 +1,8 @@
+openinference-instrumentation-openai
+openai
+openinference-instrumentation-autogen
+autogen
+arize-otel
+python-dotenv
+psycopg2-binary
+
