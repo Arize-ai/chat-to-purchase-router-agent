@@ -108,22 +108,21 @@ def search_products_nl(query: str) -> Union[List[Dict[str, Any]], str]:
     
     sql, params = _generate_sql_from_nl(query.strip())
     
-    # Check if SQL is empty or just whitespace
     sql_clean = sql.strip() if sql else ""
     print(f"SQL clean: {repr(sql_clean)}")
     if not sql_clean:
-        return "No products found because of no valid SQL generated."
+        return "I couldn't generate a valid search query from your request. Please try rephrasing your search."
     
     print(f"Executing SQL query: {sql}")
     
     try:
         results = execute_query(sql, params)
         if not results:
-            return "No products found like in general."
+            return "I couldn't find any products matching your search in our catalog."
         return f"Found {len(results)} product(s): {results}"
     except Exception as e:
         logger.error(f"Error executing SQL query: {e}")
-        return "No products found because of error executing SQL query."
+        return "I encountered an error while searching. Please try again."
         
 
 
