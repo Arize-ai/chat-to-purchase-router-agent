@@ -1,6 +1,8 @@
 {
   "scripts": {
     "dev": "next dev",
+    "dev:backend": "bash ../start-backend.sh",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
     "build": "next build",
     "start": "next start"
   },
@@ -15,6 +17,7 @@
     "@types/pg": "^8.10.9",
     "@types/react": "18.2.46",
     "@types/react-dom": "18.2.18",
+    "concurrently": "^8.2.2",
     "typescript": "5.3.3"
   }
 }

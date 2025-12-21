@@ -1,8 +1,10 @@
 openinference-instrumentation-openai
+openinference-instrumentation-openai-agents
 openai
-openinference-instrumentation-autogen
-autogen
 arize-otel
 python-dotenv
 psycopg2-binary
+fastapi
+uvicorn
+python-multipart
 

@@ -95,10 +95,11 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
         applyCartActions(response.cartActions)
       }
     } catch (error) {
+      console.error('ChatPanel error:', error)
       const errorMessage: ChatMessage = {
         id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: error instanceof Error ? error.message : 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),
       }
       setMessages([...newMessages, errorMessage])

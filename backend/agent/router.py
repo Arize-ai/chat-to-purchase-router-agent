@@ -1,5 +1,5 @@
 """
-Agent router for handling chat requests.
+Agent router for handling chat requests using OpenAI Agents API.
 """
 import sys
 from pathlib import Path
@@ -8,13 +8,11 @@ from pathlib import Path
 root_dir = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(root_dir))
 
-import asyncio
 import os
 import argparse
+from typing import Tuple
 from dotenv import load_dotenv
-from autogen import AssistantAgent, UserProxyAgent, register_function
-import openai
-import autogen
+from openai import OpenAI
 from backend.agent.db_queries import search_products_nl
 
 load_dotenv()
@@ -22,10 +20,7 @@ load_dotenv()
 if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY must be set in environment variables")
 
-llm_config = {
-    "model": "gpt-5",  
-    "api_key": os.getenv("OPENAI_API_KEY"),
-}
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 SYSTEM_PROMPT = """You are a shopping assistant for an online shoe store.
 
@@ -60,46 +55,66 @@ Which items would you like to add to your cart? Please let me know the product n
 
 Be friendly, concise, and helpful."""
 
-def create_agent_pair(message: str = None, max_turns: int = 20):
-    """
-    Create a pair of assistant and user proxy agents.
-    If a message is provided, automatically initiates the chat.
-    
+# Define tool schema for search_products_nl
+SEARCH_PRODUCTS_TOOL = {
+    "type": "function",
+    "name": "search_products_nl",
+    "description": (
+        "Search for products using natural language query. "
+        "Use when customers ask about products by name, price, rating, "
+        "category, or combinations. Examples: 'running shoes under $100', "
+        "'highly rated casual shoes', 'Nike products', 'cheapest running shoes'. "
+        "Returns a list of products with id, name, description, price, rating, category, and image_path."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "query": {
+                "type": "string",
+                "description": (
+                    "Natural language product search query "
+                    "(e.g., 'running shoes under $100', 'highly rated casual shoes')"
+                )
+            }
+        },
+        "required": ["query"]
+    }
+}
 
-    """
-    assistant_agent = AssistantAgent(
-        name="shopping_assistant",
-        llm_config=llm_config,
-        system_message=SYSTEM_PROMPT,
-        max_consecutive_auto_reply=3,
-        function_map={
-            "search_products_nl": search_products_nl
-        }
-    )
-    
-    user_proxy = UserProxyAgent(
-        name="user",
-        human_input_mode="ALWAYS",
-        max_consecutive_auto_reply=10,
-    )
-    
-    register_function(
-        search_products_nl,
-        caller=assistant_agent,
-        executor=user_proxy,
-        description="Search for products using natural language query. Use when customers ask about products by name, price, rating, category, or combinations. Examples: 'running shoes under $100', 'highly rated casual shoes', 'Nike products', 'cheapest running shoes'. Returns a list of products with id, name, description, price, rating, category, and image_path."
-    )
-    
-    if message:
-        user_proxy.initiate_chat(
-            recipient=assistant_agent,
-            message=message,
-            max_turns=max_turns,
-        )
-    
-    return assistant_agent, user_proxy
 
-assistant_agent, user_proxy = create_agent_pair()
+def chat_with_agent(user_message: str, session_id: str, previous_response_id: str = None) -> Tuple[str, str]:
+    """
+    Chat with OpenAI Agents API.
+    
+    Args:
+        user_message: The user's message
+        session_id: Session/conversation ID (for tracking, not used in API)
+        previous_response_id: ID of previous response for conversation continuity
+        
+    Returns:
+        Tuple of (agent_reply_text, response_id) - response_id should be stored for next call
+    """
+    # Build the request parameters
+    params = {
+        "model": "gpt-4o",
+        "input": user_message,
+        "tools": [SEARCH_PRODUCTS_TOOL],
+    }
+    
+    # Add previous_response_id if provided (for conversation continuity)
+    if previous_response_id:
+        params["previous_response_id"] = previous_response_id
+    
+    # For the first message, prepend system prompt to input
+    # (OpenAI Agents API may not support separate system_instruction parameter)
+    if not previous_response_id:
+        params["input"] = f"{SYSTEM_PROMPT}\n\nUser: {user_message}"
+    
+    # Create the response using OpenAI Agents API
+    response = client.responses.create(**params)
+    
+    # Return both the output text and the response ID for next call
+    return response.output_text, response.id
 
 
 if __name__ == "__main__":
@@ -110,4 +125,14 @@ if __name__ == "__main__":
     parser.add_argument("message", type=str, help="Message to send to the agent")
     args = parser.parse_args()
     
-    create_agent_pair(message=args.message)
+    # Generate a session ID for this conversation
+    import uuid
+    session_id = str(uuid.uuid4())
+    
+    reply, response_id = chat_with_agent(
+        user_message=args.message,
+        session_id=session_id
+    )
+    
+    print(f"Agent reply: {reply}")
+    print(f"Response ID: {response_id} (use this as previous_response_id for next message)")
