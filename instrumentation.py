@@ -2,12 +2,15 @@
 Arize AI instrumentation setup.
 """
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from arize.otel import register
 from openinference.instrumentation.openai import OpenAIInstrumentor
-from openinference.instrumentation.autogen import AutogenInstrumentor
 
-load_dotenv()
+# Load .env file from project root
+root_dir = Path(__file__).parent
+env_path = root_dir / '.env'
+load_dotenv(dotenv_path=env_path)
 _instrumented = False
 
 def setup_instrumentation():
@@ -20,9 +23,9 @@ def setup_instrumentation():
     arize_api_key = os.getenv("ARIZE_API_KEY")
     
     if not arize_space_id or not arize_api_key:
-        raise ValueError(
-            "ARIZE_SPACE_ID and ARIZE_API_KEY must be set in environment variables"
-        )
+        print("Warning: ARIZE_SPACE_ID and ARIZE_API_KEY not set. Skipping Arize AI instrumentation.")
+        _instrumented = True
+        return
     
     register(
         space_id=arize_space_id,
@@ -31,7 +34,6 @@ def setup_instrumentation():
     )
     
     OpenAIInstrumentor().instrument()
-    AutogenInstrumentor().instrument()
     
     _instrumented = True
     print("Arize AI instrumentation initialized!")

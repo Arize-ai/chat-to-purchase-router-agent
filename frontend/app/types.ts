@@ -13,6 +13,7 @@ export interface ChatMessage {
   role: 'user' | 'assistant'
   content: string
   timestamp: Date
+  cartActions?: CartAction[]
 }
 
 export interface CartAction {

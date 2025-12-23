@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { ChatMessage, CartAction } from '../types'
 import { sendChatMessage } from '../chat'
 import { useCart } from '../cart/CartContext'
@@ -15,7 +15,7 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const { addToCart, removeFromCart, updateQuantity, clearCart } = useCart()
+  const { addToCart } = useCart()
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -36,31 +36,6 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
       setMessages([welcomeMessage])
     }
   }, [isOpen, messages.length])
-
-  const applyCartActions = useCallback((actions: CartAction[]) => {
-    actions.forEach((action) => {
-      switch (action.type) {
-        case 'add':
-          if (action.product) {
-            addToCart(action.product)
-          }
-          break
-        case 'remove':
-          if (action.productId) {
-            removeFromCart(action.productId)
-          }
-          break
-        case 'update':
-          if (action.productId !== undefined && action.quantity !== undefined) {
-            updateQuantity(action.productId, action.quantity)
-          }
-          break
-        case 'clear':
-          clearCart()
-          break
-      }
-    })
-  }, [addToCart, removeFromCart, updateQuantity, clearCart])
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -86,14 +61,10 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
         role: 'assistant',
         content: response.message,
         timestamp: new Date(),
+        cartActions: response.cartActions || [],
       }
 
       setMessages([...newMessages, assistantMessage])
-
-      // Apply any cart actions from the agent
-      if (response.cartActions && response.cartActions.length > 0) {
-        applyCartActions(response.cartActions)
-      }
     } catch (error) {
       console.error('ChatPanel error:', error)
       const errorMessage: ChatMessage = {
@@ -123,6 +94,25 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
             <div key={message.id} className={`chat-message ${message.role}`}>
               <div className="chat-message-content">
                 {message.content}
+                {message.role === 'assistant' && message.cartActions && message.cartActions.length > 0 && (
+                  <div className="chat-product-actions">
+                    {message.cartActions
+                      .filter(action => action.type === 'add' && action.product)
+                      .map((action, index) => (
+                        <button
+                          key={index}
+                          className="add-to-cart-button"
+                          onClick={() => {
+                            if (action.product) {
+                              addToCart(action.product)
+                            }
+                          }}
+                        >
+                          Add "{action.product?.name}" to Cart
+                        </button>
+                      ))}
+                  </div>
+                )}
               </div>
               <div className="chat-message-time">
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
