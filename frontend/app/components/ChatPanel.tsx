@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 import { ChatMessage, CartAction } from '../types'
 import { sendChatMessage } from '../chat'
 import { useCart } from '../cart/CartContext'
@@ -92,7 +93,11 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
           {messages.map((message) => (
             <div key={message.id} className={`chat-message ${message.role}`}>
               <div className="chat-message-content">
-                {message.content}
+                {message.role === 'assistant' ? (
+                  <ReactMarkdown>{message.content}</ReactMarkdown>
+                ) : (
+                  message.content
+                )}
                 {message.role === 'assistant' && message.cartActions && message.cartActions.length > 0 && (
                   <div className="chat-product-actions">
                     {message.cartActions
