@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useMemo } from 'react'
+import { memo } from 'react'
 import { Product } from '../types'
 import { formatPrice, formatRating, getImagePath, truncateText } from '../formatting'
 
@@ -10,10 +10,7 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product, onClick }: ProductCardProps) {
-  const truncatedDesc = useMemo(
-    () => truncateText(product.description || '', 100),
-    [product.description]
-  )
+  const truncatedDesc = truncateText(product.description || '', 100)
   
   return (
     <div className="product-card" onClick={onClick}>

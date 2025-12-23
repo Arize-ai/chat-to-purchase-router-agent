@@ -66,7 +66,6 @@ export default function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
 
       setMessages([...newMessages, assistantMessage])
     } catch (error) {
-      console.error('ChatPanel error:', error)
       const errorMessage: ChatMessage = {
         id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         role: 'assistant',

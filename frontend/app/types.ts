@@ -22,4 +22,3 @@ export interface CartAction {
   quantity?: number
   product?: Product
 }
-

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Populate database from cached seed data. Run: python database/populate_db.py"""
+"""Populate database from cached seed data."""
 
 import psycopg2
 from pathlib import Path
@@ -9,7 +9,6 @@ DB_CONFIG = {'host': 'localhost', 'port': 5432, 'database': 'chat_to_purchase', 
 CACHE_FILE = Path(__file__).parent / 'seed_cache.json'
 
 def populate_database():
-    # Load cache
     try:
         with open(CACHE_FILE, 'r') as f:
             cache = json.load(f)
@@ -18,7 +17,6 @@ def populate_database():
         print(f"Error: Cache file not found: {CACHE_FILE}")
         return
     
-    # Connect to database
     try:
         conn = psycopg2.connect(**DB_CONFIG)
         cursor = conn.cursor()
@@ -26,7 +24,6 @@ def populate_database():
         print(f"Error: {e}\nMake sure database is running: docker-compose up -d")
         return
     
-    # Check existing products
     cursor.execute("SELECT COUNT(*) FROM products")
     if cursor.fetchone()[0] > 0:
         if input(f"Found existing products. Clear and repopulate? (y/n): ").lower() != 'y':
@@ -34,13 +31,14 @@ def populate_database():
             return
         cursor.execute("TRUNCATE TABLE products RESTART IDENTITY")
     
-    # Insert products
     print(f"Inserting {len(cache)} products...")
     inserted = failed = 0
     for idx, (filename, p) in enumerate(cache.items(), 1):
         try:
-            cursor.execute("INSERT INTO products (name, description, price, image_path, rating, category) VALUES (%s, %s, %s, %s, %s, %s)",
-                         (p['name'], p['description'], p['price'], p['image_path'], p['rating'], p['category']))
+            cursor.execute(
+                "INSERT INTO products (name, description, price, image_path, rating, category) VALUES (%s, %s, %s, %s, %s, %s)",
+                (p['name'], p['description'], p['price'], p['image_path'], p['rating'], p['category'])
+            )
             inserted += 1
             if idx % 50 == 0 or idx == len(cache):
                 print(f"  {inserted}/{len(cache)} inserted...")

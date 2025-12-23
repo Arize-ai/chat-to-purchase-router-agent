@@ -3,7 +3,6 @@ import Header from './components/Header'
 import ProductList from './components/ProductList'
 import { Product } from './types'
 
-// Create a pool instance that can be reused
 const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
   port: parseInt(process.env.DB_PORT || '5432'),

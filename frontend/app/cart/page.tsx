@@ -1,15 +1,15 @@
 'use client'
 
-import { useMemo, useCallback } from 'react'
+import { useCallback } from 'react'
 import Link from 'next/link'
 import { useCart } from './CartContext'
 import Header from '../components/Header'
 import { formatPrice, getImagePath } from '../formatting'
 
 export default function CartPage() {
-  const { cart, removeFromCart, updateQuantity, clearCart, getTotal, getItemCount } = useCart()
+  const { cart, removeFromCart, updateQuantity, clearCart, getTotal } = useCart()
 
-  const total = useMemo(() => getTotal(), [getTotal])
+  const total = getTotal()
 
   const handleDecreaseQuantity = useCallback(
     (id: number, currentQuantity: number) => {

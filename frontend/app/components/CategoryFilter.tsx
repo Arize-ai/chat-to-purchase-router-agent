@@ -26,4 +26,3 @@ export default function CategoryFilter({ categories, selectedCategory, onCategor
     </div>
   )
 }
-

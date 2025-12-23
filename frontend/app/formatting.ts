@@ -1,7 +1,3 @@
-/**
- * Utility functions for formatting common values
- */
-
 export function formatPrice(price: number): string {
   return `$${price.toFixed(2)}`
 }

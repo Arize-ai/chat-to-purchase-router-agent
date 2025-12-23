@@ -1,24 +1,21 @@
 """
-Agent router for handling chat requests using OpenAI Agents API.
+Agent router for handling chat requests using OpenAI Responses API.
 """
-import sys
 from pathlib import Path
 
-# Add project root to path so imports work when run directly
 root_dir = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(root_dir))
 
 import os
 import json
 import re
-import uuid
-import argparse
 from typing import Tuple, Optional, Any, Dict, List
 from dotenv import load_dotenv
 from openai import OpenAI
+from opentelemetry.trace import Status, StatusCode
+from openinference.instrumentation import using_session, using_prompt_template
 from backend.agent.db_queries import search_products_nl
+import instrumentation
 
-# Load .env file from project root
 env_path = root_dir / '.env'
 load_dotenv(dotenv_path=env_path)
 
@@ -26,35 +23,25 @@ if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY must be set in environment variables")
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+tracer = instrumentation.get_tracer(__name__)
 
 SYSTEM_PROMPT = """You are a shopping assistant for an online shoe store.
 
-CRITICAL RULE: You MUST ALWAYS use the search_products_nl() tool when customers:
-- Ask about products (e.g., "show me running shoes", "I want black sneakers")
-- Request specific products (e.g., "I'd like to get the black canvas skate sneakers", "I want Nike shoes")
-- Ask about product names, brands, or specific shoes
-- Ask about price (e.g., "shoes under $100", "cheap shoes")
-- Ask about rating (e.g., "highly rated", "best rated", "4+ stars")
-- Ask about category (e.g., "running shoes", "casual", "athletic")
-- Ask about any combination of the above
+CRITICAL: You MUST ALWAYS use the search_products_nl() tool when customers ask about products, prices, ratings, categories, brands, or any combination. Use the tool immediately - do NOT ask follow-up questions first.
 
 The database contains products with: id, name, description, price, rating (0-5), category, and image_path.
 
-IMPORTANT: When customers mention ANY product, you MUST use the search_products_nl() tool FIRST. Do NOT respond without searching. Do NOT ask follow-up questions - use the tool immediately.
+After receiving product results:
+- If customer asked for a specific product, show that product (or closest match)
+- If browsing, show top 4-5 products (prioritize by rating, then price)
+- Present in a numbered list: product name, price, rating, and brief description
+- Always end with: "Which items would you like to add to your cart? Please let me know the product numbers or names."
 
-CRITICAL: After receiving product results from the tool:
-1. Parse the product list from the tool response
-2. If the customer asked for a specific product, show that product (or the closest match)
-3. If the customer is browsing, select the top 4-5 products (prioritize by rating, then price if needed)
-4. Present them in a neat, numbered list format showing: product name, price, rating, and a brief description
-5. After showing the list, ALWAYS ask: "Which items would you like to add to your cart? Please let me know the product numbers or names."
+When customer wants to add a product to cart (e.g., "I want to add X", "I'll take X", "add X to cart"):
+1. Search for that product using the tool
+2. Confirm and say: "I'll add [Product Name] to your cart"
 
-IMPORTANT: When a customer explicitly says they want to ADD a product to cart (e.g., "I want to add X", "I'll take X", "add X to cart", "I'd like to get X"), you should:
-1. Search for that specific product using the tool
-2. Confirm which product you found
-3. Use language like "I'll add [Product Name] to your cart" or "Adding [Product Name] to your cart"
-
-Example format for browsing:
+Example browsing format:
 "Here are some great options I found:
 
 1. [Product Name] - $[price] ⭐ [rating]/5
@@ -63,12 +50,7 @@ Example format for browsing:
 2. [Product Name] - $[price] ⭐ [rating]/5
    [Brief description]
 
-[... continue for 4-5 products ...]
-
 Which items would you like to add to your cart? Please let me know the product numbers or names."
-
-Example format when customer wants to add to cart:
-"Great choice! I'll add the **[Product Name]** to your cart. [Brief confirmation message]"
 
 Be friendly, concise, and helpful."""
 
@@ -117,13 +99,25 @@ def _extract_products_from_result(result: str) -> List[Dict[str, Any]]:
 
 def run_tool(tool_name: str, arguments: dict) -> Tuple[str, List[Dict[str, Any]]]:
     """Execute a tool call and return the result string and products list."""
-    if tool_name == "search_products_nl":
-        query = arguments.get("query", "")
-        result = search_products_nl(query)
-        products = _extract_products_from_result(result)
-        return result if isinstance(result, str) else str(result), products
-    else:
-        raise ValueError(f"Unknown tool: {tool_name}")
+    with tracer.start_as_current_span(f"tool.{tool_name}") as span:
+        span.set_attribute("openinference.span.kind", "TOOL")
+        span.set_attribute("input.value", json.dumps(arguments))
+        try:
+            if tool_name == "search_products_nl":
+                query = arguments.get("query", "")
+                result = search_products_nl(query)
+                products = _extract_products_from_result(result)
+                output = result if isinstance(result, str) else str(result)
+                span.set_attribute("output.value", output)
+                span.set_status(Status(StatusCode.OK))
+                return output, products
+            else:
+                error_msg = f"Unknown tool: {tool_name}"
+                span.set_status(Status(StatusCode.ERROR, error_msg))
+                raise ValueError(error_msg)
+        except Exception as e:
+            span.set_status(Status(StatusCode.ERROR, str(e)))
+            raise
 
 
 def _extract_output_text(response: Any) -> Optional[str]:
@@ -165,13 +159,12 @@ def _parse_tool_arguments(args: Any) -> Dict[str, Any]:
     """Parse tool call arguments (may be JSON string, dict, or None)."""
     if args is None:
         return {}
-    elif isinstance(args, str):
+    if isinstance(args, str):
         try:
             return json.loads(args)
         except json.JSONDecodeError:
             return {}
-    else:
-        return args or {}
+    return args or {}
 
 
 def _extract_tool_call_info(call: Any) -> Optional[Tuple[str, str, Dict[str, Any]]]:
@@ -193,117 +186,95 @@ def _extract_tool_call_info(call: Any) -> Optional[Tuple[str, str, Dict[str, Any
 
 
 def chat_with_agent(user_message: str, session_id: str, previous_response_id: str = None) -> Tuple[str, str, list]:
-    """
-    Chat with OpenAI Agents API with tool execution loop.
-    
-    Args:
-        user_message: The user's message
-        session_id: Session/conversation ID (for tracking, not used in API)
-        previous_response_id: ID of previous response for conversation continuity
-        
+    """ 
     Returns:
         Tuple of (agent_reply_text, response_id, products) - products is a list of product dicts from tool calls
     """
-    # Build the request parameters
-    params = {
-        "model": "gpt-4o",
-        "input": user_message,
-        "tools": [SEARCH_PRODUCTS_TOOL],
-    }
-    
-    # Add previous_response_id if provided (for conversation continuity)
-    if previous_response_id:
-        params["previous_response_id"] = previous_response_id
-    
-    # For the first message, prepend system prompt to input
-    if not previous_response_id:
-        params["input"] = f"{SYSTEM_PROMPT}\n\nUser: {user_message}"
-    
-    # Create the initial response using OpenAI Agents API
-    response = client.responses.create(**params)
-    
-    # Tool call execution loop
-    max_iterations = 10  # Prevent infinite loops
-    iteration = 0
-    found_products = []  # Track products found during tool execution
-    
-    ERROR_MESSAGE = "I'm sorry, I encountered an issue processing your request."
-    
-    while iteration < max_iterations:
-        iteration += 1
-        
-        output_text = _extract_output_text(response)
-        if output_text:
-            return output_text, response.id, found_products
-        
-        tool_calls = _extract_tool_calls(response)
-        if not tool_calls:
-            output_text = _extract_output_text(response)
-            return output_text or ERROR_MESSAGE, response.id, found_products
-        
-        # Execute each tool call
-        tool_outputs = []
-        for call in tool_calls:
-            call_info = _extract_tool_call_info(call)
-            if not call_info:
-                continue
-            
-            tool_name, call_id, tool_arguments = call_info
-            
+    with using_session(session_id=session_id):
+        with tracer.start_as_current_span("chat_with_agent") as span:
+            span.set_attribute("openinference.span.kind", "CHAIN")
+            span.set_attribute("input.value", user_message)
             try:
-                result, products = run_tool(tool_name, tool_arguments)
-                if products and isinstance(products, list):
-                    found_products.extend(products)
+                input_text = f"{SYSTEM_PROMPT}\n\nUser: {user_message}" if not previous_response_id else user_message
+                params = {
+                    "model": "gpt-4o",
+                    "input": input_text,
+                    "tools": [SEARCH_PRODUCTS_TOOL],
+                }
+                if previous_response_id:
+                    params["previous_response_id"] = previous_response_id
                 
-                tool_outputs.append({
-                    "type": "function_call_output",
-                    "call_id": call_id,
-                    "output": result,
-                })
-            except Exception as e:
-                tool_outputs.append({
-                    "type": "function_call_output",
-                    "call_id": call_id,
-                    "output": f"Error: {str(e)}",
-                })
+                with using_prompt_template(
+                    template="{system_prompt}\n\nUser: {user_message}",
+                    variables={"system_prompt": SYSTEM_PROMPT, "user_message": user_message} if not previous_response_id else {},
+                    version="v1.0",
+                ):
+                    response = client.responses.create(**params)
         
-        # Send tool results back to the model
-        try:
-            response = client.responses.create(
-                model="gpt-4o",
-                previous_response_id=response.id,
-                input=tool_outputs,
-            )
-        except Exception as e:
-            if "No tool output found" in str(e) or "invalid_request_error" in str(e):
-                return (
-                    "I apologize, but I encountered an issue while processing your request. "
-                    "Please try rephrasing your question or ask me again.",
-                    response.id,
-                    found_products
-                )
-            return ERROR_MESSAGE, response.id, found_products
-    
-    # Exhausted iterations or no valid response
-    if iteration >= max_iterations:
-        return f"{ERROR_MESSAGE} Please try again.", response.id, found_products
-    
-    output_text = _extract_output_text(response)
-    return output_text or ERROR_MESSAGE, response.id, found_products
-
-
-if __name__ == "__main__":
-    import instrumentation
-    instrumentation.setup_instrumentation()
-    
-    parser = argparse.ArgumentParser(description="Run the shopping assistant agent")
-    parser.add_argument("message", type=str, help="Message to send to the agent")
-    args = parser.parse_args()
-    
-    session_id = str(uuid.uuid4())
-    
-    reply, response_id, products = chat_with_agent(
-        user_message=args.message,
-        session_id=session_id
-    )
-    
+                max_iterations = 10
+                iteration = 0
+                found_products = []
+                ERROR_MESSAGE = "I'm sorry, I encountered an issue processing your request."
+                
+                while iteration < max_iterations:
+                    iteration += 1
+                    
+                    output_text = _extract_output_text(response)
+                    if output_text:
+                        span.set_attribute("output.value", output_text)
+                        span.set_status(Status(StatusCode.OK))
+                        return output_text, response.id, found_products
+                    
+                    tool_calls = _extract_tool_calls(response)
+                    if not tool_calls:
+                        result = output_text or ERROR_MESSAGE
+                        span.set_attribute("output.value", result)
+                        span.set_status(Status(StatusCode.OK))
+                        return result, response.id, found_products
+                    
+                    tool_outputs = []
+                    for call in tool_calls:
+                        call_info = _extract_tool_call_info(call)
+                        if not call_info:
+                            continue
+                        
+                        tool_name, call_id, tool_arguments = call_info
+                        
+                        try:
+                            result, products = run_tool(tool_name, tool_arguments)
+                            if products and isinstance(products, list):
+                                found_products.extend(products)
+                            tool_outputs.append({
+                                "type": "function_call_output",
+                                "call_id": call_id,
+                                "output": result,
+                            })
+                        except Exception as e:
+                            tool_outputs.append({
+                                "type": "function_call_output",
+                                "call_id": call_id,
+                                "output": f"Error: {str(e)}",
+                            })
+                    
+                    try:
+                        response = client.responses.create(
+                            model="gpt-4o",
+                            previous_response_id=response.id,
+                            input=tool_outputs,
+                        )
+                    except Exception as e:
+                        if "No tool output found" in str(e) or "invalid_request_error" in str(e):
+                            error_msg = "I apologize, but I encountered an issue while processing your request. Please try rephrasing your question."
+                        else:
+                            error_msg = ERROR_MESSAGE
+                        span.set_attribute("output.value", error_msg)
+                        span.set_status(Status(StatusCode.ERROR, str(e)))
+                        return error_msg, response.id, found_products
+                
+                result = _extract_output_text(response) or f"{ERROR_MESSAGE} Please try again."
+                span.set_attribute("output.value", result)
+                span.set_status(Status(StatusCode.ERROR if iteration >= max_iterations else StatusCode.OK))
+                return result, response.id, found_products
+            except Exception as e:
+                span.set_status(Status(StatusCode.ERROR, str(e)))
+                raise

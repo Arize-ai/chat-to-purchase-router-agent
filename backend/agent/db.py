@@ -36,10 +36,7 @@ def execute_query(query: str, params: Optional[tuple] = None) -> List[Dict[str, 
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    if params:
-        cursor.execute(query, params)
-    else:
-        cursor.execute(query)
+    cursor.execute(query, params)
     
     columns = [desc[0] for desc in cursor.description] if cursor.description else []
     rows = cursor.fetchall()
@@ -47,8 +44,7 @@ def execute_query(query: str, params: Optional[tuple] = None) -> List[Dict[str, 
     results = []
     for row in rows:
         row_dict = {}
-        for i, col in enumerate(columns):
-            value = row[i]
+        for col, value in zip(columns, row):
             if isinstance(value, (int, float)) or hasattr(value, '__float__'):
                 row_dict[col] = float(value)
             else:

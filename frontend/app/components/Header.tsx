@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { useCart } from '../cart/CartContext'
@@ -12,7 +12,7 @@ interface HeaderProps {
 
 export default function Header({ title }: HeaderProps) {
   const { getItemCount } = useCart()
-  const count = useMemo(() => getItemCount(), [getItemCount])
+  const count = getItemCount()
   const pathname = usePathname()
   const [isChatOpen, setIsChatOpen] = useState(false)
 
