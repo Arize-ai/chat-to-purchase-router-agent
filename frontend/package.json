@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "dev:backend": "bash -c 'cd .. && source venv/bin/activate && python3 backend/main.py'",
+    "dev:all": "concurrently -n \"frontend,backend\" -c \"blue,green\" \"npm run dev\" \"npm run dev:backend\"",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "pg": "^8.11.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.6",
+    "@types/pg": "^8.10.9",
+    "@types/react": "18.2.46",
+    "@types/react-dom": "18.2.18",
+    "concurrently": "^8.2.2",
+    "typescript": "5.3.3"
+  }
+}

@@ -1,0 +1,802 @@
+{
+  "3df003fa2c37a43009c94d93ba0c74450f744b69.jpg": {
+    "name": "Black Suede Platform Chelsea Boots",
+    "description": "These stylish black suede Chelsea boots feature a chunky platform sole, offering both height and comfort. The elastic side panels ensure a snug fit, making them perfect for casual outings or adding a bold touch to your everyday look.",
+    "price": 89.99,
+    "rating": 3.8,
+    "category": "boots",
+    "image_path": "black_shoes/3df003fa2c37a43009c94d93ba0c74450f744b69.jpg"
+  },
+  "2b3efef0b95db9c0c0ba2a21b36e7ecf57d3d74b.jpg": {
+    "name": "Black Suede Over-the-Knee Boots",
+    "description": "These stylish black over-the-knee boots feature a sleek suede finish, perfect for adding a touch of elegance to any outfit. The sturdy sole provides comfort and durability, making them ideal for both casual and dressy occasions. Crafted for versatility, they are a must-have for the fall and winter seasons.",
+    "price": 149.99,
+    "rating": 4.6,
+    "category": "boots",
+    "image_path": "black_shoes/2b3efef0b95db9c0c0ba2a21b36e7ecf57d3d74b.jpg"
+  },
+  "3fe492344bc9289b9b54ffce3b546a9d3b073591.jpg": {
+    "name": "Elegant Black Suede High Heel Boots",
+    "description": "These sophisticated black boots feature a sleek suede finish and a stylish high heel, perfect for both casual and formal occasions. The soft material provides comfort and a luxurious feel, making them ideal for evening outings or a chic addition to your work wardrobe.",
+    "price": 179.99,
+    "rating": 3.9,
+    "category": "boots",
+    "image_path": "black_shoes/3fe492344bc9289b9b54ffce3b546a9d3b073591.jpg"
+  },
+  "4a34feb2ee27a0b63fca135f7d551db96e736840.jpg": {
+    "name": "Black Crocodile Leather Western Ankle Boots",
+    "description": "These stylish ankle boots feature a striking crocodile leather pattern, offering a bold and sophisticated look. Designed with a pointed toe and a sturdy block heel, they are perfect for both casual and formal occasions. The high-quality leather ensures durability and comfort.",
+    "price": 199.99,
+    "rating": 3.5,
+    "category": "ankle boots",
+    "image_path": "black_shoes/4a34feb2ee27a0b63fca135f7d551db96e736840.jpg"
+  },
+  "10bbe8934e7ad6a734abbb8f7c290ef818aba1e0.jpg": {
+    "name": "Classic Black Leather Sneakers",
+    "description": "These sleek black sneakers feature a smooth leather upper with a durable rubber sole, offering both style and comfort. Ideal for casual outings or everyday wear, they provide a versatile option that pairs well with various outfits.",
+    "price": 89.99,
+    "rating": 4.8,
+    "category": "sneakers",
+    "image_path": "black_shoes/10bbe8934e7ad6a734abbb8f7c290ef818aba1e0.jpg"
+  },
+  "1cb7d1ab602fc3472a32c7ea3c0d0f09d2d9c5b2.jpg": {
+    "name": "Classic Black Cap-Toe Oxford Dress Shoes",
+    "description": "These elegant black Oxford dress shoes feature a sleek cap-toe design, crafted from high-quality leather for a polished finish. Ideal for formal occasions or professional settings, they offer both style and comfort with their durable construction and timeless appeal.",
+    "price": 149.99,
+    "rating": 4.2,
+    "category": "dress shoes",
+    "image_path": "black_shoes/1cb7d1ab602fc3472a32c7ea3c0d0f09d2d9c5b2.jpg"
+  },
+  "0cc51e84a6c9ad780c56b32caf026c138cf0bc5d.jpg": {
+    "name": "Black Leather Lace-Up Combat Boots",
+    "description": "These rugged black leather combat boots feature a lace-up design with side zippers for easy wear. Crafted from durable leather, they are perfect for both casual outings and outdoor adventures, offering style and functionality.",
+    "price": 99.99,
+    "rating": 3.4,
+    "category": "boots",
+    "image_path": "black_shoes/0cc51e84a6c9ad780c56b32caf026c138cf0bc5d.jpg"
+  },
+  "04f78f68ad64d04505c32aa0540aef2bb7a61bd0.jpg": {
+    "name": "Vintage Black and White Slingback Heels",
+    "description": "These elegant slingback heels feature a classic black and white design with a peep-toe style. Made from high-quality leather and fabric, they are perfect for formal occasions or a stylish night out.",
+    "price": 89.99,
+    "rating": 3.9,
+    "category": "heels",
+    "image_path": "black_shoes/04f78f68ad64d04505c32aa0540aef2bb7a61bd0.jpg"
+  },
+  "6d7d5180caef3022c13e96d6e8d29cfc497369c5.jpg": {
+    "name": "Elegant Black Leather Ballet Flats",
+    "description": "These sleek black ballet flats feature a smooth leather finish with a decorative buckle detail, offering a blend of style and comfort. Perfect for casual outings or office wear, they provide a versatile option for everyday use. The cushioned insole ensures all-day comfort.",
+    "price": 79.99,
+    "rating": 3.0,
+    "category": "flats",
+    "image_path": "black_shoes/6d7d5180caef3022c13e96d6e8d29cfc497369c5.jpg"
+  },
+  "3a0eccb519ecbabc6ddc9166106e9cc3548e79a7.jpg": {
+    "name": "Black High-Top Hiking Sneakers",
+    "description": "These rugged high-top sneakers feature a durable black exterior with reinforced eyelets and a padded collar for comfort. Designed with a sturdy sole and breathable material, they are ideal for hiking and outdoor adventures. The sleek design also makes them suitable for casual urban wear.",
+    "price": 89.99,
+    "rating": 3.4,
+    "category": "hiking shoes",
+    "image_path": "black_shoes/3a0eccb519ecbabc6ddc9166106e9cc3548e79a7.jpg"
+  },
+  "4d906d30ddbce4786f8755a69b05115bd579aa10.jpg": {
+    "name": "Black Leather Combat Boots",
+    "description": "These rugged black leather combat boots feature a durable lace-up design with metal eyelets and a sturdy sole for enhanced grip. Ideal for both casual and outdoor wear, they offer a blend of style and functionality, making them perfect for urban exploration or hiking.",
+    "price": 149.99,
+    "rating": 3.1,
+    "category": "boots",
+    "image_path": "black_shoes/4d906d30ddbce4786f8755a69b05115bd579aa10.jpg"
+  },
+  "3b2f907f6aaf3e0e1be39b0fca4f01219b13d52c.jpg": {
+    "name": "Classic Black Leather Chukka Boots",
+    "description": "These sleek black leather chukka boots feature a smooth finish and a minimalist design, perfect for both casual and semi-formal occasions. Crafted from high-quality leather, they offer durability and comfort with a timeless style. Ideal for pairing with jeans or dress pants for a versatile look.",
+    "price": 149.99,
+    "rating": 4.0,
+    "category": "boots",
+    "image_path": "black_shoes/3b2f907f6aaf3e0e1be39b0fca4f01219b13d52c.jpg"
+  },
+  "4c683f983d4b3ce95cb73a91a45d2d9ff3ad9bd4.jpg": {
+    "name": "Glossy Black Knee-High Riding Boots",
+    "description": "These sleek knee-high riding boots feature a glossy black finish, offering a chic and polished look. Crafted from high-quality leather, they are perfect for both casual and semi-formal occasions, providing comfort and style.",
+    "price": 179.99,
+    "rating": 4.7,
+    "category": "boots",
+    "image_path": "black_shoes/4c683f983d4b3ce95cb73a91a45d2d9ff3ad9bd4.jpg"
+  },
+  "4a2a7e0ced3e9462df02989c2ce8111e3221715e.jpg": {
+    "name": "Black Mesh Athletic Sneakers",
+    "description": "These sleek black athletic sneakers feature a breathable mesh upper with signature stripe detailing, offering both style and comfort. Ideal for casual wear or light workouts, they provide excellent support and traction. The lightweight design ensures all-day comfort, making them perfect for everyday use.",
+    "price": 89.99,
+    "rating": 3.0,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/4a2a7e0ced3e9462df02989c2ce8111e3221715e.jpg"
+  },
+  "1d3c48c9b772eb9aa980994c43857f6b1f8261c0.jpg": {
+    "name": "Classic Black Canvas Sneakers",
+    "description": "These classic black canvas sneakers feature a minimalist design with a durable fabric upper and sturdy rubber sole, perfect for casual outings and everyday wear. The lace-up style ensures a secure fit, while the breathable material offers comfort throughout the day.",
+    "price": 49.99,
+    "rating": 3.2,
+    "category": "sneakers",
+    "image_path": "black_shoes/1d3c48c9b772eb9aa980994c43857f6b1f8261c0.jpg"
+  },
+  "6a9e7e13be3e1f8adb1fd113c3275989eb806bfc.jpg": {
+    "name": "Elegant Black Suede Ankle Boots",
+    "description": "These chic black ankle boots feature a sleek suede finish and a sturdy block heel, perfect for both casual and formal occasions. The minimalist design and comfortable fit make them ideal for all-day wear, whether at the office or out on the town.",
+    "price": 149.99,
+    "rating": 3.1,
+    "category": "ankle boots",
+    "image_path": "black_shoes/6a9e7e13be3e1f8adb1fd113c3275989eb806bfc.jpg"
+  },
+  "14ba0c4a9adc63b12267bd7e55d31dc89f8b0893.jpg": {
+    "name": "Classic Black Leather Knee-High Boots",
+    "description": "These sleek black knee-high boots are crafted from premium leather, offering both style and durability. Perfect for both casual and formal settings, they feature a comfortable sole and a timeless design that complements any outfit.",
+    "price": 179.99,
+    "rating": 4.0,
+    "category": "boots",
+    "image_path": "black_shoes/14ba0c4a9adc63b12267bd7e55d31dc89f8b0893.jpg"
+  },
+  "0cfadeb466d1f1e1e2291044bb507e1508e4712b.jpg": {
+    "name": "Black Leather Western Cowboy Boots",
+    "description": "These classic black leather cowboy boots feature intricate embroidery and a sturdy heel, perfect for both style and function. Made from high-quality leather, they are ideal for casual wear or country-themed events, offering both comfort and durability.",
+    "price": 159.99,
+    "rating": 4.2,
+    "category": "boots",
+    "image_path": "black_shoes/0cfadeb466d1f1e1e2291044bb507e1508e4712b.jpg"
+  },
+  "4cc82981f2831864198e2e807b526089d8bc43ed.jpg": {
+    "name": "Black Suede High-Heeled Ankle Boots",
+    "description": "These elegant black ankle boots feature a sleek suede finish and a sturdy block heel, perfect for both casual and formal occasions. The back zipper adds a modern touch while ensuring easy wear. Ideal for pairing with dresses or jeans for a chic, sophisticated look.",
+    "price": 149.99,
+    "rating": 3.6,
+    "category": "ankle boots",
+    "image_path": "black_shoes/4cc82981f2831864198e2e807b526089d8bc43ed.jpg"
+  },
+  "3d06c3265d0e9bfed103db9fcd25e47d38edc3ad.jpg": {
+    "name": "Black Leather Ankle Boots with Buckle",
+    "description": "These sleek black leather ankle boots feature a stylish buckle detail and a side zipper for easy wear. Crafted from high-quality leather, they offer both durability and comfort, making them ideal for casual and semi-formal occasions. The boots' versatile design pairs well with jeans or dress pants.",
+    "price": 149.99,
+    "rating": 5.0,
+    "category": "ankle boots",
+    "image_path": "black_shoes/3d06c3265d0e9bfed103db9fcd25e47d38edc3ad.jpg"
+  },
+  "6de5b70c46fc494be6aa00557be9c2c1258811fb.jpg": {
+    "name": "Classic Black Leather Sneakers",
+    "description": "These sleek black leather sneakers feature a minimalist design with a smooth finish, perfect for both casual and semi-formal occasions. The shoes are crafted from high-quality leather, offering durability and comfort for everyday wear.",
+    "price": 149.99,
+    "rating": 3.4,
+    "category": "sneakers",
+    "image_path": "black_shoes/6de5b70c46fc494be6aa00557be9c2c1258811fb.jpg"
+  },
+  "0fbd46b7fe2b8ff71744014a15258a862a9c22c5.jpg": {
+    "name": "Elegant Black Suede Ankle Booties",
+    "description": "These chic black ankle booties feature a sleek suede finish and a stylish stiletto heel, perfect for both formal and casual occasions. The slip-on design offers convenience, while the soft interior lining ensures comfort throughout the day.",
+    "price": 89.99,
+    "rating": 4.0,
+    "category": "ankle boots",
+    "image_path": "black_shoes/0fbd46b7fe2b8ff71744014a15258a862a9c22c5.jpg"
+  },
+  "12ebf5ba0bde236f9a3d79d870afb9bceb90dff9.jpg": {
+    "name": "Studded Black Leather Ankle Boots",
+    "description": "These chic ankle boots feature a sleek black leather exterior adorned with metallic studs for a modern edge. The high curved heel and pointed toe design add sophistication, making them perfect for both casual and formal occasions. Crafted from premium leather, they offer durability and style.",
+    "price": 199.99,
+    "rating": 4.8,
+    "category": "ankle boots",
+    "image_path": "black_shoes/12ebf5ba0bde236f9a3d79d870afb9bceb90dff9.jpg"
+  },
+  "6a035cb55db883b205c636935aaa557726612b2d.jpg": {
+    "name": "Elegant Black Leather Knee-High Boots",
+    "description": "These sleek knee-high boots feature a smooth black leather finish and a sturdy block heel, offering both style and comfort. Ideal for both formal and casual settings, they pair perfectly with dresses or jeans for a chic look. The high-quality leather ensures durability and a timeless appeal.",
+    "price": 179.99,
+    "rating": 4.9,
+    "category": "boots",
+    "image_path": "black_shoes/6a035cb55db883b205c636935aaa557726612b2d.jpg"
+  },
+  "4ec146dc2fbc05fd3caaf76f3c94ec6476375f75.jpg": {
+    "name": "Casual Black Leather Derby Shoes",
+    "description": "These casual black derby shoes feature a smooth leather upper with subtle stitching details, perfect for both office wear and casual outings. The shoes offer a comfortable fit with a durable sole, making them ideal for all-day wear. Crafted for versatility, they pair well with both formal and smart-casual attire.",
+    "price": 89.99,
+    "rating": 3.7,
+    "category": "casual shoes",
+    "image_path": "black_shoes/4ec146dc2fbc05fd3caaf76f3c94ec6476375f75.jpg"
+  },
+  "0d1111385629c4ba29efaed576aa7a4e63156d68.jpg": {
+    "name": "Modern Black Low-Top Sneakers",
+    "description": "These sleek black low-top sneakers feature a minimalist design with a smooth leather upper and subtle suede accents. Ideal for casual wear, they offer comfort and style with a cushioned sole perfect for all-day use.",
+    "price": 89.99,
+    "rating": 4.2,
+    "category": "sneakers",
+    "image_path": "black_shoes/0d1111385629c4ba29efaed576aa7a4e63156d68.jpg"
+  },
+  "4e7ebc85161d847aa6c6448dd7c3f54e5dcedde9.jpg": {
+    "name": "Studded Black Leather Ankle Boots",
+    "description": "These stylish black leather ankle boots feature intricate gold stud detailing and multiple buckle straps, offering a bold and edgy look. Crafted from high-quality leather, they are perfect for making a fashion statement in casual or semi-formal settings. The sturdy heel provides comfort and support for all-day wear.",
+    "price": 179.99,
+    "rating": 4.3,
+    "category": "ankle boots",
+    "image_path": "black_shoes/4e7ebc85161d847aa6c6448dd7c3f54e5dcedde9.jpg"
+  },
+  "3a24a1b28571b74adb87fd35ad570af6ed401794.jpg": {
+    "name": "Black Leather Buckle Ankle Boots",
+    "description": "These rugged black leather ankle boots feature a stylish buckle detail and a sturdy sole, perfect for both casual and semi-formal occasions. Crafted from high-quality leather, they offer durability and a sleek look. Ideal for pairing with jeans or a casual outfit.",
+    "price": 149.99,
+    "rating": 5.0,
+    "category": "ankle boots",
+    "image_path": "black_shoes/3a24a1b28571b74adb87fd35ad570af6ed401794.jpg"
+  },
+  "4a4ab186bca37774411c7d30839d4b429d10dfe1.jpg": {
+    "name": "Black Lace-Up Ankle Boots with Knit Cuff",
+    "description": "These stylish black ankle boots feature a lace-up design with a cozy knit cuff, perfect for adding a touch of warmth and style. Made from durable leather, they are ideal for casual outings and complement a variety of outfits. The sturdy sole provides excellent traction, making them suitable for both urban and outdoor settings.",
+    "price": 89.99,
+    "rating": 3.1,
+    "category": "ankle boots",
+    "image_path": "black_shoes/4a4ab186bca37774411c7d30839d4b429d10dfe1.jpg"
+  },
+  "6d9b4ae3bd3c1fcfa4e499198f06c907f4f830f4.jpg": {
+    "name": "Black Leather Hiking Boots",
+    "description": "These rugged black leather hiking boots feature a durable construction with metal eyelets and a padded collar for comfort. Designed for outdoor adventures, they offer excellent grip and support on various terrains, making them ideal for hiking and trekking.",
+    "price": 149.99,
+    "rating": 4.5,
+    "category": "boots",
+    "image_path": "black_shoes/6d9b4ae3bd3c1fcfa4e499198f06c907f4f830f4.jpg"
+  },
+  "4afeef5955553abb789b163fabf1426df5c372f5.jpg": {
+    "name": "Black and White Mesh Athletic Sneakers",
+    "description": "These sleek athletic sneakers feature a breathable black and white mesh upper, perfect for both casual wear and sports activities. The lightweight design and cushioned sole provide comfort and support for everyday use or intense workouts.",
+    "price": 89.99,
+    "rating": 3.1,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/4afeef5955553abb789b163fabf1426df5c372f5.jpg"
+  },
+  "4b87b3ddbcc584da00bdd028fc4ad57f6c63e001.jpg": {
+    "name": "Feiyue Black Canvas Martial Arts Sneakers",
+    "description": "These black canvas sneakers feature a classic design with a rubber sole, ideal for martial arts and casual wear. The shoe offers flexibility and grip, making it perfect for both indoor training and everyday activities. Its lightweight construction ensures comfort and ease of movement.",
+    "price": 49.99,
+    "rating": 3.1,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/4b87b3ddbcc584da00bdd028fc4ad57f6c63e001.jpg"
+  },
+  "0cee0c2a04d08bf150b2245426c998622172b5d5.jpg": {
+    "name": "Puma Black Velvet Platform Sneakers",
+    "description": "These stylish black velvet sneakers feature a sleek platform sole for added height and a modern look. The luxurious velvet material offers a unique texture, making them perfect for casual outings or adding a touch of elegance to everyday wear.",
+    "price": 120.0,
+    "rating": 3.3,
+    "category": "sneakers",
+    "image_path": "black_shoes/0cee0c2a04d08bf150b2245426c998622172b5d5.jpg"
+  },
+  "6f9963a15fbf7160735a55e916059bf053251a67.jpg": {
+    "name": "Classic Black Cap Toe Oxford Dress Shoes",
+    "description": "These elegant black cap toe Oxford dress shoes feature a sleek leather upper with a polished finish, ideal for formal occasions and professional settings. The shoes are crafted with a durable rubber sole for enhanced grip and comfort, making them perfect for long wear. Their timeless design and high-quality materials ensure they remain a staple in any wardrobe.",
+    "price": 199.99,
+    "rating": 4.1,
+    "category": "dress shoes",
+    "image_path": "black_shoes/6f9963a15fbf7160735a55e916059bf053251a67.jpg"
+  },
+  "4ed8a581511e00453e6200b72c899127ac7c1065.jpg": {
+    "name": "Classic Black Leather Western Cowboy Boots",
+    "description": "These classic black cowboy boots feature intricate stitching on premium leather, offering a timeless Western style. The boots are designed with a pointed toe and a sturdy heel, making them perfect for both casual wear and country-themed events. Ideal for those seeking durability and style in a versatile boot.",
+    "price": 179.99,
+    "rating": 3.7,
+    "category": "boots",
+    "image_path": "black_shoes/4ed8a581511e00453e6200b72c899127ac7c1065.jpg"
+  },
+  "3d771cea348edf1e58647e9b58a34df7fb967749.jpg": {
+    "name": "Black Skateboarding Sneakers",
+    "description": "These sleek black skateboarding sneakers feature a durable suede upper and padded collar for comfort and support. Designed for both style and functionality, they are perfect for skateboarding enthusiasts and casual wear. The thick rubber sole provides excellent grip and stability.",
+    "price": 89.99,
+    "rating": 4.6,
+    "category": "sneakers",
+    "image_path": "black_shoes/3d771cea348edf1e58647e9b58a34df7fb967749.jpg"
+  },
+  "011f6c6e40a5029deaa5eb29bc41783276e25bac.jpg": {
+    "name": "Black Leather Wedge Ankle Boots",
+    "description": "These sleek black leather ankle boots feature a stylish wedge heel and decorative buckle straps, offering both elegance and comfort. Crafted from high-quality leather, they are perfect for casual outings or a night out. The boots provide a chic look while ensuring durability and support.",
+    "price": 179.99,
+    "rating": 4.5,
+    "category": "ankle boots",
+    "image_path": "black_shoes/011f6c6e40a5029deaa5eb29bc41783276e25bac.jpg"
+  },
+  "2c41ce115da2ffc5b99dcb9907627748417372b4.jpg": {
+    "name": "Black Combat Lace-Up Buckle Boots",
+    "description": "These rugged black combat boots feature a lace-up front with multiple buckle straps for added style and support. Made from durable faux leather, they are perfect for both casual wear and outdoor adventures, offering a bold and edgy look.",
+    "price": 89.99,
+    "rating": 3.7,
+    "category": "boots",
+    "image_path": "black_shoes/2c41ce115da2ffc5b99dcb9907627748417372b4.jpg"
+  },
+  "08bbfde61bf2922ae0a00219e0421b59eb43e390.jpg": {
+    "name": "Classic Black Leather Combat Boots",
+    "description": "These robust black leather combat boots feature a high lace-up design, providing both style and durability. Crafted from premium leather, they are ideal for both rugged outdoor activities and urban fashion. The sturdy sole offers excellent grip and support for all-day wear.",
+    "price": 149.99,
+    "rating": 4.5,
+    "category": "boots",
+    "image_path": "black_shoes/08bbfde61bf2922ae0a00219e0421b59eb43e390.jpg"
+  },
+  "1f6f1d54b23c0f347bfafd50b7f6d55775d3c131.jpg": {
+    "name": "Black Leather Casual Sneakers",
+    "description": "These black leather sneakers feature a sleek and versatile design, perfect for casual outings or smart-casual events. Made from high-quality leather, they offer a comfortable fit with durable rubber soles for everyday wear.",
+    "price": 99.99,
+    "rating": 4.6,
+    "category": "sneakers",
+    "image_path": "black_shoes/1f6f1d54b23c0f347bfafd50b7f6d55775d3c131.jpg"
+  },
+  "1df4213060ad7fb810ea4fad2ccca548c246cebd.jpg": {
+    "name": "Black Suede Skate Sneakers",
+    "description": "These black suede skate sneakers feature a low-top design with a padded collar for comfort and support. The durable rubber sole provides excellent grip, making them ideal for skateboarding or casual wear. The stylish design and subtle branding make them versatile for everyday use.",
+    "price": 89.99,
+    "rating": 4.9,
+    "category": "sneakers",
+    "image_path": "black_shoes/1df4213060ad7fb810ea4fad2ccca548c246cebd.jpg"
+  },
+  "0d4ae1188775052c45dd822ef447cd95707b382d.jpg": {
+    "name": "Black Lace-Up Chunky Heel Ankle Boots",
+    "description": "These stylish black ankle boots feature a chunky heel and lace-up design, perfect for adding a touch of edge to any outfit. Made from durable synthetic leather, they are ideal for casual outings or a night out. The padded collar ensures comfort for all-day wear.",
+    "price": 89.99,
+    "rating": 4.7,
+    "category": "ankle boots",
+    "image_path": "black_shoes/0d4ae1188775052c45dd822ef447cd95707b382d.jpg"
+  },
+  "2b7fbc5a4a50d301e43a0005203c746c6f59bdd9.jpg": {
+    "name": "Black Suede Lace-Up Ankle Boots",
+    "description": "These stylish black ankle boots feature a suede upper with a lace-up design, perfect for casual or semi-formal occasions. The chunky heel provides comfort and stability, making them ideal for all-day wear. Pair them with jeans or a dress for a versatile look.",
+    "price": 89.99,
+    "rating": 3.2,
+    "category": "ankle boots",
+    "image_path": "black_shoes/2b7fbc5a4a50d301e43a0005203c746c6f59bdd9.jpg"
+  },
+  "3d994bf42ac870e81ebbcec55765ed17f24fa84a.jpg": {
+    "name": "Classic Black Leather Oxford Dress Shoes",
+    "description": "These elegant black Oxford dress shoes feature a sleek, polished leather finish and a traditional lace-up design. Ideal for formal occasions and professional settings, they offer a timeless style that complements any suit. The durable leather construction ensures long-lasting wear and comfort.",
+    "price": 129.99,
+    "rating": 4.6,
+    "category": "dress shoes",
+    "image_path": "black_shoes/3d994bf42ac870e81ebbcec55765ed17f24fa84a.jpg"
+  },
+  "2f43c5079233bd0bbcbdbcda6bace9f1e154b979.jpg": {
+    "name": "Black Crocodile Leather Harness Boots",
+    "description": "These striking black boots feature a crocodile leather texture, offering a rugged yet sophisticated look. The harness detailing adds a touch of Western flair, making them perfect for both casual and semi-formal occasions. Crafted for durability and style, they are ideal for those looking to make a bold fashion statement.",
+    "price": 199.99,
+    "rating": 3.2,
+    "category": "boots",
+    "image_path": "black_shoes/2f43c5079233bd0bbcbdbcda6bace9f1e154b979.jpg"
+  },
+  "0f45e56ca7879ec369aef82b370dc03fa4eb7bb2.jpg": {
+    "name": "Black Knit Lightweight Running Sneakers",
+    "description": "These sleek black sneakers feature a breathable knit upper, offering a modern and lightweight design ideal for running and casual wear. The flexible sole provides excellent traction and comfort, making them perfect for both athletic activities and everyday use. Crafted with a focus on style and functionality, they are a versatile addition to any wardrobe.",
+    "price": 99.99,
+    "rating": 4.5,
+    "category": "sneakers",
+    "image_path": "black_shoes/0f45e56ca7879ec369aef82b370dc03fa4eb7bb2.jpg"
+  },
+  "2e74553be455d91eb8b723b0b522fb9c9fcd9552.jpg": {
+    "name": "Black Patent Leather Ballet Flats",
+    "description": "These elegant black ballet flats feature a glossy patent leather finish and a delicate bow detail, perfect for both casual and formal occasions. The slip-on design and cushioned insole provide comfort for all-day wear. Ideal for pairing with dresses or jeans for a chic, versatile look.",
+    "price": 89.99,
+    "rating": 4.2,
+    "category": "flats",
+    "image_path": "black_shoes/2e74553be455d91eb8b723b0b522fb9c9fcd9552.jpg"
+  },
+  "13fe9eb262be71f62a004536dfdaf81ac1c39eb8.jpg": {
+    "name": "Black Peep-Toe Ankle Strap Heels",
+    "description": "These stylish black peep-toe heels feature a unique ankle strap design with contrasting white stitching. Made from high-quality leather, they are perfect for evening events or a night out. The elegant design and comfortable fit make them a versatile addition to any wardrobe.",
+    "price": 149.99,
+    "rating": 3.6,
+    "category": "heels",
+    "image_path": "black_shoes/13fe9eb262be71f62a004536dfdaf81ac1c39eb8.jpg"
+  },
+  "3a34ab86819106f84752f27238dd7f2ac9b1c7da.jpg": {
+    "name": "Black Canvas Skate Sneakers",
+    "description": "These sleek black canvas skate sneakers offer a minimalist design with durable construction, perfect for both casual wear and skateboarding. The low-top style provides flexibility, while the rubber sole ensures grip and stability. Ideal for everyday use and active lifestyles.",
+    "price": 69.99,
+    "rating": 4.5,
+    "category": "sneakers",
+    "image_path": "black_shoes/3a34ab86819106f84752f27238dd7f2ac9b1c7da.jpg"
+  },
+  "0ec4f0de8af9c9fb0708a8df46cb3c8aee982b7b.jpg": {
+    "name": "Black Leather Ankle Boots with Buckle Strap",
+    "description": "These sleek black ankle boots feature a smooth leather finish and a stylish buckle strap for added flair. Designed for both comfort and style, they are perfect for casual outings or a night out. The durable leather material ensures longevity and a polished look.",
+    "price": 149.99,
+    "rating": 3.5,
+    "category": "ankle boots",
+    "image_path": "black_shoes/0ec4f0de8af9c9fb0708a8df46cb3c8aee982b7b.jpg"
+  },
+  "6a878f90452eba329dca140d1eccb775d2a2912b.jpg": {
+    "name": "Black Gel Upcourt Athletic Shoes",
+    "description": "These black athletic shoes feature a breathable mesh upper with synthetic overlays for added support. Designed for indoor sports, they offer excellent grip and cushioning, making them ideal for court activities like volleyball or badminton.",
+    "price": 89.99,
+    "rating": 3.5,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/6a878f90452eba329dca140d1eccb775d2a2912b.jpg"
+  },
+  "3ce010de4a0f9a13f6241eab741fa361237a0d68.jpg": {
+    "name": "Black Leather Harness Ankle Boots",
+    "description": "These black leather harness ankle boots feature a rugged design with a sturdy heel and metal hardware accents. Crafted from high-quality leather, they offer durability and a classic western style, ideal for casual wear or motorcycle riding.",
+    "price": 149.99,
+    "rating": 3.5,
+    "category": "ankle boots",
+    "image_path": "black_shoes/3ce010de4a0f9a13f6241eab741fa361237a0d68.jpg"
+  },
+  "17a168f544ab99b9b930f0fa65a42720a11cf6cf.jpg": {
+    "name": "Classic Black Leather Loafers",
+    "description": "These classic black loafers feature a sleek leather upper with a comfortable slip-on design, perfect for casual and semi-formal occasions. The textured sole provides excellent grip, while the cushioned interior ensures all-day comfort. Ideal for pairing with both jeans and dress pants.",
+    "price": 89.99,
+    "rating": 3.5,
+    "category": "loafers",
+    "image_path": "black_shoes/17a168f544ab99b9b930f0fa65a42720a11cf6cf.jpg"
+  },
+  "3de31cc3d98c873df08b64b8cbba2ae97f8e49ac.jpg": {
+    "name": "Black Suede Lace-Up Combat Boots",
+    "description": "These black suede combat boots feature a classic lace-up design with durable stitching and a sturdy rubber sole. Perfect for both casual and rugged outdoor use, they offer a stylish yet practical choice for everyday wear.",
+    "price": 149.99,
+    "rating": 4.8,
+    "category": "boots",
+    "image_path": "black_shoes/3de31cc3d98c873df08b64b8cbba2ae97f8e49ac.jpg"
+  },
+  "3e3eb1fe468ec0bd58cd953b8784424145ba099b.jpg": {
+    "name": "Black Suede Wedge Ankle Boots",
+    "description": "These sleek black suede ankle boots feature a stylish wedge heel and a convenient side zipper for easy wear. The soft suede material offers a luxurious feel, making them perfect for both casual and semi-formal occasions. Ideal for adding a touch of elegance to your fall and winter wardrobe.",
+    "price": 89.99,
+    "rating": 4.4,
+    "category": "ankle boots",
+    "image_path": "black_shoes/3e3eb1fe468ec0bd58cd953b8784424145ba099b.jpg"
+  },
+  "12cc46ad75c8c611d141178cbccdb98f61a5c6fd.jpg": {
+    "name": "Black Leather Driving Loafers",
+    "description": "These sleek black leather loafers feature a classic moccasin-style design with a durable rubber sole, perfect for driving or casual outings. The soft leather construction ensures comfort and style, making them ideal for everyday wear.",
+    "price": 99.99,
+    "rating": 4.8,
+    "category": "loafers",
+    "image_path": "black_shoes/12cc46ad75c8c611d141178cbccdb98f61a5c6fd.jpg"
+  },
+  "1b0ef9f3fd643d32451782bab22c482b547a08c5.jpg": {
+    "name": "Black Leather Combat Boots",
+    "description": "These rugged black leather combat boots feature a lace-up design with durable metal eyelets and a sturdy rubber sole. Perfect for outdoor adventures or adding an edgy touch to your everyday look, these boots offer both style and functionality.",
+    "price": 149.99,
+    "rating": 3.2,
+    "category": "boots",
+    "image_path": "black_shoes/1b0ef9f3fd643d32451782bab22c482b547a08c5.jpg"
+  },
+  "3b6e5d1788e81e3872274a203b6fb1db4010acfa.jpg": {
+    "name": "Black Crochet Slip-On Loafers",
+    "description": "These stylish black slip-on loafers feature a delicate crochet design, offering a breathable and lightweight feel. Perfect for casual outings, they combine comfort with a chic aesthetic, making them ideal for warm weather wear.",
+    "price": 59.99,
+    "rating": 3.2,
+    "category": "loafers",
+    "image_path": "black_shoes/3b6e5d1788e81e3872274a203b6fb1db4010acfa.jpg"
+  },
+  "01e1243e57ebf1a17e536a9cd3d0ff1f97496df2.jpg": {
+    "name": "Black Leather Tactical Work Shoes",
+    "description": "These durable black leather tactical shoes feature a rugged design with reinforced stitching, ideal for demanding work environments. The sturdy sole provides excellent grip, making them perfect for both indoor and outdoor use. Designed for comfort and durability, these shoes are suitable for security personnel or anyone needing reliable footwear.",
+    "price": 89.99,
+    "rating": 4.1,
+    "category": "work shoes",
+    "image_path": "black_shoes/01e1243e57ebf1a17e536a9cd3d0ff1f97496df2.jpg"
+  },
+  "3d8b87b8df613704cd0e46a1815cc80814dccad7.jpg": {
+    "name": "Elegant Black Suede Over-the-Knee Boots",
+    "description": "These stylish black over-the-knee boots feature a sleek suede finish, perfect for adding a touch of sophistication to any outfit. The boots are designed with a comfortable low heel and side zipper for easy wear, making them ideal for both casual and dressy occasions.",
+    "price": 89.99,
+    "rating": 4.2,
+    "category": "boots",
+    "image_path": "black_shoes/3d8b87b8df613704cd0e46a1815cc80814dccad7.jpg"
+  },
+  "3e33e2ca1b991488cdf3864d8b89e476489ca45e.jpg": {
+    "name": "Black Leather Combat Boots",
+    "description": "These robust black leather combat boots feature a high ankle design with durable laces and a sturdy sole, ideal for rugged outdoor activities. Crafted from premium leather, they offer both style and functionality, making them perfect for both casual wear and demanding environments.",
+    "price": 149.99,
+    "rating": 3.8,
+    "category": "boots",
+    "image_path": "black_shoes/3e33e2ca1b991488cdf3864d8b89e476489ca45e.jpg"
+  },
+  "2a5c2076627f97e9dda37db1454e30867dd23b7e.jpg": {
+    "name": "Black Leather Ankle Boots with Button Detail",
+    "description": "These sleek black ankle boots feature a smooth leather exterior with stylish button accents on the side. Designed for comfort and durability, they are perfect for casual outings or everyday wear during cooler months.",
+    "price": 89.99,
+    "rating": 3.3,
+    "category": "ankle boots",
+    "image_path": "black_shoes/2a5c2076627f97e9dda37db1454e30867dd23b7e.jpg"
+  },
+  "4a1bcc6dd2ac4e71eba0abc55123d88966e29fb5.jpg": {
+    "name": "Black Perforated Ankle Booties",
+    "description": "These stylish black ankle booties feature a perforated design and a sturdy block heel, perfect for casual or semi-formal wear. Crafted from high-quality synthetic materials, they offer both comfort and durability. Ideal for pairing with jeans or dresses for a chic, modern look.",
+    "price": 89.99,
+    "rating": 3.1,
+    "category": "ankle boots",
+    "image_path": "black_shoes/4a1bcc6dd2ac4e71eba0abc55123d88966e29fb5.jpg"
+  },
+  "3abb402bbd7fe546828a04a00bd3ebe44646ab7f.jpg": {
+    "name": "Black Studded High-Top Sneakers",
+    "description": "These edgy high-top sneakers feature a bold black design adorned with metal studs, perfect for making a statement. Crafted from durable canvas with a rubber sole, they offer both style and comfort. Ideal for casual outings or adding a punk-inspired touch to your outfit.",
+    "price": 89.99,
+    "rating": 4.2,
+    "category": "sneakers",
+    "image_path": "black_shoes/3abb402bbd7fe546828a04a00bd3ebe44646ab7f.jpg"
+  },
+  "4cb0c87767058257670a04273e2388030973404c.jpg": {
+    "name": "Black Athletic Basketball Sneakers",
+    "description": "These black athletic sneakers feature a sleek design with a breathable mesh upper and durable rubber sole, ideal for basketball enthusiasts. The shoes offer excellent grip and support, making them perfect for both indoor and outdoor courts. With a stylish logo detail, they combine performance with modern aesthetics.",
+    "price": 120.0,
+    "rating": 3.5,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/4cb0c87767058257670a04273e2388030973404c.jpg"
+  },
+  "3c5da906572b8f0bcfca28ad9da4bfca4ec94a87.jpg": {
+    "name": "Studded Black Ankle Boots with Buckle Straps",
+    "description": "These edgy black ankle boots feature three bold buckle straps and are adorned with metallic studs for a striking appearance. Crafted from high-quality leather, they offer both durability and style, making them perfect for casual outings or adding a rock-chic edge to your ensemble.",
+    "price": 149.99,
+    "rating": 3.2,
+    "category": "ankle boots",
+    "image_path": "black_shoes/3c5da906572b8f0bcfca28ad9da4bfca4ec94a87.jpg"
+  },
+  "05a6a402c7279d56fe7372021ed92d8fddcd1831.jpg": {
+    "name": "Black Suede Platform Creepers",
+    "description": "These black suede platform creepers feature a bold, chunky sole and lace-up design, offering a unique blend of vintage and modern style. Made from high-quality suede, they provide both comfort and durability, making them ideal for casual outings or adding an edgy touch to your outfit.",
+    "price": 89.99,
+    "rating": 4.4,
+    "category": "creepers",
+    "image_path": "black_shoes/05a6a402c7279d56fe7372021ed92d8fddcd1831.jpg"
+  },
+  "6f1805f65d347b157ed410acf92395827d7f0519.jpg": {
+    "name": "Sparkling Black Glitter Combat Boots",
+    "description": "These eye-catching combat boots feature a dazzling black glitter finish, perfect for making a statement. Crafted with durable materials, they offer both style and comfort, ideal for casual outings or adding a bold touch to any outfit. The sturdy sole ensures reliable traction and support.",
+    "price": 89.99,
+    "rating": 3.5,
+    "category": "boots",
+    "image_path": "black_shoes/6f1805f65d347b157ed410acf92395827d7f0519.jpg"
+  },
+  "12bcc0ed91599421eea03675971c05d9d4ad0f98.jpg": {
+    "name": "Elegant Black Leather and Suede Lace-Up Boots",
+    "description": "These sophisticated boots feature a sleek combination of smooth leather and soft suede, offering a refined look. The lace-up design provides a secure fit, making them ideal for both formal and casual occasions. Perfect for those seeking a blend of style and comfort.",
+    "price": 199.99,
+    "rating": 4.4,
+    "category": "boots",
+    "image_path": "black_shoes/12bcc0ed91599421eea03675971c05d9d4ad0f98.jpg"
+  },
+  "4d0baf34fc35d7655f8ddc282d5057142c130690.jpg": {
+    "name": "Classic Black Mary Jane Flats",
+    "description": "These elegant black Mary Jane flats feature a smooth leather finish and a secure strap for comfort and style. Ideal for both casual and formal occasions, they offer a versatile addition to any wardrobe. The cushioned insole ensures all-day comfort, making them perfect for school or work.",
+    "price": 59.99,
+    "rating": 4.1,
+    "category": "flats",
+    "image_path": "black_shoes/4d0baf34fc35d7655f8ddc282d5057142c130690.jpg"
+  },
+  "4b7d748c6ed17e0e55ca797c6efedf48eab7de5a.jpg": {
+    "name": "Classic Black Leather Ballet Flats",
+    "description": "These elegant black ballet flats feature a sleek leather upper with a simple, timeless design. Perfect for both casual and formal occasions, they offer comfort and versatility for everyday wear.",
+    "price": 79.99,
+    "rating": 3.9,
+    "category": "flats",
+    "image_path": "black_shoes/4b7d748c6ed17e0e55ca797c6efedf48eab7de5a.jpg"
+  },
+  "3dcb8547716c8743abfccca288e1eb6af4b85b25.jpg": {
+    "name": "Elegant Black Leather Knee-High Boots",
+    "description": "These sleek knee-high boots feature a polished black leather exterior with a stylish buckle accent. Designed for both fashion and function, they are perfect for pairing with dresses or jeans for a sophisticated look. Ideal for cooler weather, these boots offer both comfort and style.",
+    "price": 189.99,
+    "rating": 3.2,
+    "category": "boots",
+    "image_path": "black_shoes/3dcb8547716c8743abfccca288e1eb6af4b85b25.jpg"
+  },
+  "6a1396619bcafdb14ac778a6f8105f96fc7d5772.jpg": {
+    "name": "Elegant Black Stretch Sock Boots",
+    "description": "These chic black sock boots feature a sleek, stretchy fabric that hugs the ankle for a modern silhouette. The pointed toe and high block heel add a touch of sophistication, making them perfect for both casual outings and dressier occasions. Crafted for comfort and style, they are ideal for pairing with dresses or skinny jeans.",
+    "price": 89.99,
+    "rating": 3.9,
+    "category": "boots",
+    "image_path": "black_shoes/6a1396619bcafdb14ac778a6f8105f96fc7d5772.jpg"
+  },
+  "3c1220a68d55afd21b27185c31ca918484a8a816.jpg": {
+    "name": "Black Leather Casual Walking Shoes",
+    "description": "These black leather walking shoes feature a robust design with durable stitching and metal eyelets for added style. Ideal for everyday wear, they offer comfort and support with a cushioned sole, making them perfect for casual outings or light hiking.",
+    "price": 89.99,
+    "rating": 4.6,
+    "category": "casual shoes",
+    "image_path": "black_shoes/3c1220a68d55afd21b27185c31ca918484a8a816.jpg"
+  },
+  "2b7426e638c9597fc1808175ffd308d06bdbdd04.jpg": {
+    "name": "Black Croc-Embossed Knee-High Western Boots",
+    "description": "These stylish knee-high boots feature a sleek black croc-embossed leather design, perfect for adding a touch of sophistication to any outfit. With a pointed toe and sturdy block heel, they are ideal for both casual and dressy occasions, offering both comfort and elegance.",
+    "price": 149.99,
+    "rating": 3.4,
+    "category": "boots",
+    "image_path": "black_shoes/2b7426e638c9597fc1808175ffd308d06bdbdd04.jpg"
+  },
+  "0f89a5550ad17be3b542e268cdc614ca46ac6c16.jpg": {
+    "name": "Embellished Black Leather Knee-High Boots",
+    "description": "These striking knee-high boots feature a luxurious black leather construction adorned with intricate gold stud embellishments. Perfect for making a bold fashion statement, they are ideal for upscale events or a night out. The boots combine elegance with a touch of edginess, making them a versatile addition to any wardrobe.",
+    "price": 249.99,
+    "rating": 4.6,
+    "category": "boots",
+    "image_path": "black_shoes/0f89a5550ad17be3b542e268cdc614ca46ac6c16.jpg"
+  },
+  "1deb5d2e2a5c16f7e8e6d57860c4ec230f5db26b.jpg": {
+    "name": "Elegant Black Leather Ankle Boots",
+    "description": "These sleek black leather ankle boots feature a smooth finish and a subtle braided detail around the ankle. Perfect for both formal and casual occasions, they offer a stylish and versatile addition to any wardrobe. Crafted from high-quality leather, they provide comfort and durability.",
+    "price": 179.99,
+    "rating": 3.9,
+    "category": "ankle boots",
+    "image_path": "black_shoes/1deb5d2e2a5c16f7e8e6d57860c4ec230f5db26b.jpg"
+  },
+  "2e481efc88027a583786b5862ffe286771425003.jpg": {
+    "name": "Black High-Top Basketball Sneakers",
+    "description": "These sleek black high-top sneakers feature a textured leather upper with stylish gold accents, perfect for both on-court performance and casual wear. The design includes a cushioned sole for comfort and support, making them ideal for basketball enthusiasts and streetwear fans alike.",
+    "price": 149.99,
+    "rating": 4.0,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/2e481efc88027a583786b5862ffe286771425003.jpg"
+  },
+  "4c56054b2dd070c83e895244dfe94fa5894fb385.jpg": {
+    "name": "Classic Black Canvas Skate Sneakers",
+    "description": "These sneakers feature a durable black canvas upper with a contrasting gum sole, perfect for casual wear and skateboarding. The white laces and stitching add a touch of style, while the padded collar ensures comfort during extended use.",
+    "price": 59.99,
+    "rating": 3.3,
+    "category": "sneakers",
+    "image_path": "black_shoes/4c56054b2dd070c83e895244dfe94fa5894fb385.jpg"
+  },
+  "6db48b0c49234470009ddb34c40d0f456348b01d.jpg": {
+    "name": "Black High-Top Athletic Sneakers",
+    "description": "These sleek black high-top sneakers feature a durable leather and synthetic upper with a classic lace-up design. Perfect for casual wear or light athletic activities, they offer both style and comfort with their cushioned sole and supportive fit.",
+    "price": 89.99,
+    "rating": 3.2,
+    "category": "athletic shoes",
+    "image_path": "black_shoes/6db48b0c49234470009ddb34c40d0f456348b01d.jpg"
+  },
+  "1e8107a26dd79ef42d5670ad7de38bc7945c4835.jpg": {
+    "name": "Black Leather Combat Boots",
+    "description": "These rugged black leather combat boots feature a lace-up design with metal eyelets, providing both style and durability. Made from high-quality leather, they are perfect for outdoor adventures or adding an edgy touch to casual outfits.",
+    "price": 89.99,
+    "rating": 3.6,
+    "category": "boots",
+    "image_path": "black_shoes/1e8107a26dd79ef42d5670ad7de38bc7945c4835.jpg"
+  },
+  "016b90002973dbedb40aecd7f0ed97184ce4b464.jpg": {
+    "name": "Black Leather Combat Boots with Brown Strap",
+    "description": "These rugged black leather combat boots feature a distinctive brown strap with buckle detailing, offering a bold and stylish look. Made from high-quality leather, they provide durability and comfort, ideal for both casual wear and outdoor adventures.",
+    "price": 149.99,
+    "rating": 4.3,
+    "category": "boots",
+    "image_path": "black_shoes/016b90002973dbedb40aecd7f0ed97184ce4b464.jpg"
+  },
+  "6d9a3644635f37ad699a64ec57405d2ccae4cd97.jpg": {
+    "name": "Black and Gray Casual Skate Sneakers",
+    "description": "These sneakers feature a sleek black and gray design with a durable rubber sole, perfect for skateboarding or casual wear. The upper is made of a combination of synthetic materials for flexibility and comfort. Ideal for everyday use, they offer a stylish yet functional look.",
+    "price": 79.99,
+    "rating": 4.3,
+    "category": "sneakers",
+    "image_path": "black_shoes/6d9a3644635f37ad699a64ec57405d2ccae4cd97.jpg"
+  },
+  "3d61829cea0c7641656420e4befc98797a55e0c7.jpg": {
+    "name": "Classic Black Oxford Dress Shoes",
+    "description": "These elegant black Oxford dress shoes feature a sleek cap-toe design, crafted from high-quality leather for a polished finish. Ideal for formal occasions and professional settings, they offer both style and comfort with their durable construction and timeless appeal.",
+    "price": 149.99,
+    "rating": 4.7,
+    "category": "dress shoes",
+    "image_path": "black_shoes/3d61829cea0c7641656420e4befc98797a55e0c7.jpg"
+  },
+  "1cec130c73d4cd26146137b7cc3c626f6878cbb1.jpg": {
+    "name": "Black High-Top Suede Sneakers",
+    "description": "These sleek black high-top sneakers feature a suede upper with leather accents, offering a stylish and modern look. Designed for both casual wear and light athletic activities, they provide comfort and durability. The star-patterned tongue adds a unique touch to this versatile shoe.",
+    "price": 110.0,
+    "rating": 4.2,
+    "category": "sneakers",
+    "image_path": "black_shoes/1cec130c73d4cd26146137b7cc3c626f6878cbb1.jpg"
+  },
+  "3e2ee472a82c1ab388c55aa064259da27dc6a5db.jpg": {
+    "name": "Classic Black Brogue Oxford Dress Shoes",
+    "description": "These elegant black brogue Oxford dress shoes feature intricate perforated detailing and a polished leather finish. Crafted for formal occasions, they offer a timeless style suitable for business meetings and upscale events. The durable leather construction ensures long-lasting wear and comfort.",
+    "price": 149.99,
+    "rating": 4.4,
+    "category": "dress shoes",
+    "image_path": "black_shoes/3e2ee472a82c1ab388c55aa064259da27dc6a5db.jpg"
+  },
+  "0e3e8fff21b2059e1677b2956a9969936a7966ef.jpg": {
+    "name": "High-Top Black and Tan Skate Sneakers",
+    "description": "These high-top skate sneakers feature a stylish combination of black, tan, and grey with perforated side panels for breathability. Crafted from durable materials, they offer excellent ankle support and a cushioned sole for comfort, making them ideal for both casual wear and skateboarding activities.",
+    "price": 89.99,
+    "rating": 4.5,
+    "category": "sneakers",
+    "image_path": "black_shoes/0e3e8fff21b2059e1677b2956a9969936a7966ef.jpg"
+  },
+  "6be881f76086dc87e8c3ef63bb1f92dc4f7e6831.jpg": {
+    "name": "Black Skateboarding Sneakers",
+    "description": "These sleek black skateboarding sneakers feature a durable canvas upper with reinforced stitching, perfect for both casual wear and skateboarding. The padded collar and tongue provide extra comfort, while the rubber outsole ensures excellent grip and stability.",
+    "price": 79.99,
+    "rating": 4.3,
+    "category": "sneakers",
+    "image_path": "black_shoes/6be881f76086dc87e8c3ef63bb1f92dc4f7e6831.jpg"
+  },
+  "1a3d4f7e8f42f0e846182449a73630709a41d81b.jpg": {
+    "name": "Black Leather Mid-Calf Motorcycle Boots",
+    "description": "These rugged black leather motorcycle boots feature a mid-calf height with adjustable straps and metal buckle accents. Made from high-quality leather, they offer durability and style, perfect for both casual wear and motorcycle riding.",
+    "price": 179.99,
+    "rating": 3.6,
+    "category": "boots",
+    "image_path": "black_shoes/1a3d4f7e8f42f0e846182449a73630709a41d81b.jpg"
+  },
+  "0cf51e027141e5c4d62529d917f862be15bd390d.jpg": {
+    "name": "Black Leather Chukka Boots",
+    "description": "These black leather chukka boots feature a sturdy design with a smooth finish, perfect for casual and semi-formal occasions. The durable leather upper and robust sole provide comfort and support, making them ideal for everyday wear. Suitable for pairing with jeans or chinos.",
+    "price": 89.99,
+    "rating": 5.0,
+    "category": "boots",
+    "image_path": "black_shoes/0cf51e027141e5c4d62529d917f862be15bd390d.jpg"
+  },
+  "02c0db070721f39e3521cef392fde72a7e6e3ee0.jpg": {
+    "name": "Studded Plaid Embellished Loafers",
+    "description": "These loafers feature a bold plaid pattern with striking studded details on the toe and heel, adding a touch of edgy sophistication. Crafted from high-quality materials, they are perfect for making a statement at formal events or upscale gatherings. The unique design and comfortable fit make them ideal for fashion-forward individuals.",
+    "price": 149.99,
+    "rating": 4.4,
+    "category": "loafers",
+    "image_path": "black_shoes/02c0db070721f39e3521cef392fde72a7e6e3ee0.jpg"
+  },
+  "0c204be644fe40b61b0e6b300f9cd191f87b518f.jpg": {
+    "name": "Black Leather Comfort Loafers",
+    "description": "These black leather loafers feature a sleek design with a cushioned sole for all-day comfort. The subtle buckle detail adds a touch of elegance, making them perfect for both casual and semi-formal occasions. Crafted from high-quality leather, they are durable and stylish.",
+    "price": 89.99,
+    "rating": 3.4,
+    "category": "loafers",
+    "image_path": "black_shoes/0c204be644fe40b61b0e6b300f9cd191f87b518f.jpg"
+  },
+  "6a426bfb9142efcfb1e130d1cf1d529ee359ea9a.jpg": {
+    "name": "Elegant Black Leather Ankle Boots",
+    "description": "These sleek black leather ankle boots feature a smooth finish and a sturdy block heel, perfect for both casual and formal occasions. Crafted from high-quality leather, they offer durability and a timeless style suitable for year-round wear.",
+    "price": 180.0,
+    "rating": 3.3,
+    "category": "ankle boots",
+    "image_path": "black_shoes/6a426bfb9142efcfb1e130d1cf1d529ee359ea9a.jpg"
+  },
+  "6f03d054d6730672cebc593e6ea88adf3e181935.jpg": {
+    "name": "Studded Black Leather Ankle Boots",
+    "description": "These edgy black leather ankle boots feature striking silver studs and multiple buckle straps, perfect for adding a bold statement to any outfit. Crafted from high-quality leather, they offer both style and durability, making them ideal for casual outings or a night out. The low heel provides comfort while maintaining a fashionable look.",
+    "price": 179.99,
+    "rating": 5.0,
+    "category": "ankle boots",
+    "image_path": "black_shoes/6f03d054d6730672cebc593e6ea88adf3e181935.jpg"
+  },
+  "014a2bbf2cd0b437fce709a40659c460474d733b.jpg": {
+    "name": "Classic Black Suede Chelsea Boots",
+    "description": "These sleek black Chelsea boots feature a smooth suede finish and elastic side panels for easy wear. Ideal for both casual and semi-formal occasions, they offer a timeless style with a comfortable fit. The durable sole ensures longevity, making them a versatile addition to any wardrobe.",
+    "price": 149.99,
+    "rating": 4.0,
+    "category": "boots",
+    "image_path": "black_shoes/014a2bbf2cd0b437fce709a40659c460474d733b.jpg"
+  },
+  "3ad34e2f2fcb37e15d9fb10e6895a0d1d969bc90.jpg": {
+    "name": "Black Casual Athletic Sneakers",
+    "description": "These sleek black sneakers feature a minimalist design with subtle branding, perfect for everyday wear. Made from durable synthetic materials, they offer comfort and style for casual outings or light athletic activities.",
+    "price": 89.99,
+    "rating": 3.8,
+    "category": "sneakers",
+    "image_path": "black_shoes/3ad34e2f2fcb37e15d9fb10e6895a0d1d969bc90.jpg"
+  },
+  "2ccd800e3834e2d96a09febb04e5b49f15dd4dbe.jpg": {
+    "name": "Black Chunky Heel Ankle Boots",
+    "description": "These stylish black ankle boots feature a chunky heel and lace-up design, crafted from high-quality faux leather. Perfect for both casual and semi-formal occasions, they offer a blend of comfort and edgy style.",
+    "price": 89.99,
+    "rating": 4.2,
+    "category": "ankle boots",
+    "image_path": "black_shoes/2ccd800e3834e2d96a09febb04e5b49f15dd4dbe.jpg"
+  },
+  "2fdc6c371111205b76b3fdc7a6efe9e841f5118b.jpg": {
+    "name": "Classic Black Leather Knee-High Boots",
+    "description": "These elegant knee-high boots feature a sleek black leather exterior with a subtle wedge heel, offering both style and comfort. Ideal for both casual and formal settings, they provide a sophisticated touch to any outfit. The durable leather material ensures longevity and a timeless look.",
+    "price": 179.99,
+    "rating": 4.1,
+    "category": "boots",
+    "image_path": "black_shoes/2fdc6c371111205b76b3fdc7a6efe9e841f5118b.jpg"
+  },
+  "0f3b74a22d4241e28414a475caf46c9596ba09c6.jpg": {
+    "name": "Classic Black Canvas Sneakers",
+    "description": "These sneakers feature a timeless black canvas upper with a durable rubber sole, perfect for casual outings and everyday wear. The lace-up design ensures a secure fit, while the minimalist style makes them versatile for various outfits.",
+    "price": 59.99,
+    "rating": 4.6,
+    "category": "sneakers",
+    "image_path": "black_shoes/0f3b74a22d4241e28414a475caf46c9596ba09c6.jpg"
+  },
+  "01fe44ddfdd017b856173deaf415e07e95521fc7.jpg": {
+    "name": "Elegant Black Velvet Loafers with Gold Accent",
+    "description": "These sophisticated loafers feature a luxurious black velvet exterior with striking gold accents on the toe. Perfect for formal occasions or upscale events, they offer a comfortable fit with a plush red interior lining.",
+    "price": 149.99,
+    "rating": 3.6,
+    "category": "loafers",
+    "image_path": "black_shoes/01fe44ddfdd017b856173deaf415e07e95521fc7.jpg"
+  }
+}
