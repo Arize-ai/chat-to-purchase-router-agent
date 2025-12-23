@@ -1,8 +1,8 @@
 {
   "scripts": {
     "dev": "next dev",
-    "dev:backend": "bash ../start-backend.sh",
-    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "dev:backend": "bash -c 'cd .. && source venv/bin/activate && python3 backend/main.py'",
+    "dev:all": "concurrently -n \"frontend,backend\" -c \"blue,green\" \"npm run dev\" \"npm run dev:backend\"",
     "build": "next build",
     "start": "next start"
   },
